@@ -1,4 +1,4 @@
-# WiFi Mobile Configuration Profile Generator
+# Mobile Configuration Profile Generator
 
 ## Table of contents
   - [What does it do?](#what-does-it-do)
@@ -10,15 +10,7 @@
 
 ## What does it do?
 
-[Back to top](#table-of-contents)
-
-When you manage your mobile devices (specifically, **iOS, Android or Windows devices**) via any source - an MDM, for example... this provider sends your device a *Configuration Profile* - this is the raw data that contain the information that they want to configure on your device. 
-
-I've ran into a lot of scenarios where I need to make a Wi-Fi profile manually - troubleshooting, testing, or simply installing a standalone one without an MDM. 
-On iOS, this is normally possible with a tool Apple provides called **Apple Configurator** - I do not have a Mac, and this tool only works on Mac devices - so this is the best next thing! 
-Windows & Android use the same format, so you can typically export a configured Wi-Fi network from a Windows machine, and import into an MDM to deploy widespread, but also to your Android devices. 
-
-This web app makes the job simple - you don't have to do any sort of exports, or use Apple Configurtor - you simply fill out the details, copy the profile to your clipboard, and you can use it however you wish - usually the contents are saved in a format such as ***wifi.mobileConfig*** for iOS, or something such as ***wifi.xml*** format for Windows & Android.
+[Back to top](#table-of-contents
 
 ## How does it work?
 
