@@ -15,12 +15,8 @@
     <script src="./js/clipboard.min.js"></script>
     <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
     <script>new ClipboardJS('.btn');</script>
-
     <script>
-      /* These are ALL of the functions needed for both iOS & Windows/Android. NOTE - There is a simple "PagePlatform" variable at the top here
-      This is used to dictate which fields are read / receive output (eg; for the passphrase, SSID, encryption type, etc. */
       var pagePlatform = "iOS";
-      /* var pagePlatform = "AndroidWindows"; */
 
       function toHex(input) {
           var result = "";
