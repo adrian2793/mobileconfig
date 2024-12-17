@@ -8,20 +8,6 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- The goal of this is simple - for the data you enter into the fields, to edit the generated XML at the bottom.
-    You should then be able to click the "Copy" button and paste it into a file.
-
-    This app is fully self-contained, and this code can be copied/used freely (more info below on the dependencies) 
-    I simply ask for you to credit me if you wish, and link to my GitHub repo for this.
-    https://github.com/daduckMSFT/WiFiProfileGenerator
-
-    =======================================================================================
-    This page  us using Bootstrap as the CSS framework, and some simple JQuery functions to take the input you type in and edit the text at the bottom. 
-    Additionally, it uses a JS Framework ("Clipboard.JS" - https://clipboard.js or https://github.com/zenorocha/clipboard.js ) to copy the profile to your clipboard
-    While this page DOES have the framework unpacked locally, you can utilize a CDN for it - I've included it below, or more info can be found at the above GitHub link.
-    -->
-
     <style>
       body {
         background-color: #1a1a1a;
@@ -31,9 +17,7 @@
   <body>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <!-- Load clipboard.js from local repo -->
     <script src="./js/clipboard.min.js"></script>
-    <!-- Load clipboard.js from CDN  
     <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script> -->
     <script>new ClipboardJS('.btn');</script>
 
