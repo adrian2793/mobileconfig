@@ -179,86 +179,23 @@
                               <div class="col-sm-10">
                                 <input type="password" class="form-control" id="inputPassphrase" placeholder="Enter passphrase" disabled>
                               </div>
-                            </div>
+                            </div>     
                             <fieldset class="form-group">
                               <div class="row">
-                                <legend class="col-form-label col-sm-2 pt-0">Security</legend>
-                                <div class="col-sm-10">
-                                  <div class="form-check">
-                                      <!-- This is where the user can select the desired security types - Open, WEP, WPA, WPA2, Any
-                                      WEP is not suggested simply because it's terrible from a security perspective -->
-                                    <input class="form-check-input" type="radio" name="SecurityRadios" id="inputSecurityOpen" value="option1" onclick="openSecurity()" checked>
-                                    <label class="form-check-label" for="gridRadios1">
-                                      Open / None
-                                    </label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="SecurityRadios" id="inputSecurityWEP" value="option2" onclick="changeValue('outputSecurityType','WEP','aqua');passphraseEnableDisable('enable')">
-                                    <label class="form-check-label" for="gridRadios2">
-                                      WEP
-                                    </label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="SecurityRadios" id="inputSecurityWPA" value="option3" onclick="changeValue('outputSecurityType','WPA2','aqua');passphraseEnableDisable('enable')">
-                                    <label class="form-check-label" for="gridRadios3">
-                                      WPA/WPA2 Personal
-                                    </label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="SecurityRadios" id="inputSecurityAny" value="option4" onclick="changeValue('outputSecurityType','Any','aqua');passphraseEnableDisable('enable')">
-                                    <label class="form-check-label" for="gridRadios4">
-                                      Any Encryption (WEP/WPA/WPA2)
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </fieldset>
-                            <fieldset class="form-group">
-                              <div class="row">
-                                <!-- This is where the user can specify if the network is hidden or not -->
-                                <legend class="col-form-label col-sm-2 pt-0">Hidden network?</legend>
-                                <div class="col-sm-10">
-                                  <div class="form-check-inline">
-                                    <input class="form-check-input" type="radio" name="hiddenRadios" id="inputHiddenNo" value="option1" onclick="changeValue('outputHidden','false','white')" checked>
-                                    <label class="form-check-label" for="gridRadios1">
-                                      No
-                                    </label>
-                                  </div>
-
-                                  <div class="form-check-inline">
-                                    <input class="form-check-input" type="radio" name="hiddenRadios" id="inputHiddenYes" value="option2" onclick="changeValue('outputHidden','true','aqua')">
-                                    <label class="form-check-label" for="gridRadios2">
-                                      Yes
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </fieldset>
-                            
-                            <!-- Automatically Connect to the Wi-Fi? -->
-                            <fieldset class="form-group">
-                              <div class="row">
-                                <!-- This is where you can specify if the device will connect to Wi-Fi automatically when in range  -->
                                 <legend class="col-form-label col-sm-2 pt-0">Auto Join?</legend>
                                 <div class="col-sm-10">
                                   <div class="form-check-inline">
                                     <input class="form-check-input" type="radio" name="AutoJoinRadios" id="inputAutoJoinYes" value="option1" onclick="changeValue('outputAutoJoin','true','white')" checked>
-                                    <label class="form-check-label" for="gridRadios1">
-                                      Yes
-                                    </label>
+                                    <label class="form-check-label" for="gridRadios1">Yes</label>
                                   </div>
                                   <div class="form-check-inline">
                                     <input class="form-check-input" type="radio" name="AutoJoinRadios" id="inputAutoJoinNo" value="option2" onclick="changeValue('outputAutoJoin','false','aqua')">
-                                    <label class="form-check-label" for="gridRadios2">
-                                      No
-                                    </label>
+                                    <label class="form-check-label" for="gridRadios2">No</label>
                                   </div>
                                 </div>
                               </div>
                             </fieldset>
-
                           </form>
-
                         <div class="form-group row">
                           <label for="inputDisplayName" class="col-sm-2 col-form-label">Display Name</label>
                           <div class="col-sm-10">
@@ -266,20 +203,15 @@
                           </div>
                         </div>
                 </div>
-            </div> <hr />
+            </div>
 
             <div class="card text-light bg-dark border-secondary">
                 <div class="card-body">
-                  <!-- The "Generated Profile" card at the bottom 
-                  This simply contains the escaped, default XML that I've entered - contains  the values (span's with ID's such as #outputHidden) with what is entered above 
-                  This is presented in a pre-scrollable code box -->
                     <h4 class="card-title font-weight-bold">Generated Profile</h4>
-
                     <div class="col-auto">
                       <button type="button" class="btn btn-primary" data-clipboard-target="#generated_profile" id="CopyAll" active>Copy to clipboard</button>
                     </div>
                       <hr />
-                    <!-- Since "pre" attributes retain spacing, the profile has white spaced removed so it isn't copied when the user gets it -->
                     <pre id="generated_profile" class="pre-scrollable text-light bg-secondary"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
 &lt;plist version=&quot;1.0&quot;&gt;
@@ -287,6 +219,8 @@
     &lt;key&gt;PayloadContent&lt;/key&gt;
     &lt;array&gt;
         &lt;dict&gt;
+            &lt;key&gt;PayloadType&gt;
+            &lt;<span id="_PayloadType"></span>/&gt;
             &lt;key&gt;AutoJoin&lt;/key&gt;
             &lt;<span id="outputAutoJoin">true</span>/&gt;
             &lt;key&gt;CaptiveBypass&lt;/key&gt;
