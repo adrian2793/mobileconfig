@@ -16,14 +16,6 @@
     <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
     <script>new ClipboardJS('.btn');</script>
 
-    <!--Brief overview of what happens (very high level) - the input you enter into the fields (eg; SSID) or the buttons you tick, modify the default text in the "Generated Profile" at the bottom. 
-    The profile at the bottom is held in a set of two elements - <pre> and <code>. This keeps the formatting. 
-    The contents inside of it are a default one I exported from a Windows machine. I added some simple <span> elements to modify the text. 
-      There are spans (such as <span id="outputSSID">Sample SSID</span> that I identify with an ID - aka, outputSSID. 
-    These are changed in real-time with some javascript functions that run in the browser. See below for more... 
-    
-    For more information on these, visit my GitHub: https://github.com/daduckMSFT/WiFiProfileGenerator -->
-
     <script>
       /* These are ALL of the functions needed for both iOS & Windows/Android. NOTE - There is a simple "PagePlatform" variable at the top here
       This is used to dictate which fields are read / receive output (eg; for the passphrase, SSID, encryption type, etc. */
