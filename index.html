@@ -105,6 +105,7 @@
                   inputText("#inputSSID","#outputSSID");
                   inputText("#inputPassphrase","#outputPassphrase");
                   inputText("#inputDisplayName","#outputDisplayName","#outputBottomDisplayName");
+                  inputText("#PayloadType", "_PayloadType")
                 });
               }
           else if (platform == "AndroidWindows") {
@@ -163,7 +164,7 @@
                           <div class="form-group row">
                               <label for="payloadType" class="col-sm-2 col-form-label">Payload Type</label>
                               <div class="col-sm-10">
-                                <input type="text" class="form-control" id="payloadType" placeholder="payloadType">
+                                <input type="text" class="form-control" id="PayloadType" placeholder="PayloadType">
                               </div>
                             </div>
                             <div class="form-group row">
@@ -208,7 +209,6 @@
                     <div class="col-auto">
                       <button type="button" class="btn btn-primary" data-clipboard-target="#generated_profile" id="CopyAll" active>Copy to clipboard</button>
                     </div>
-                      <hr />
                     <pre id="generated_profile" class="pre-scrollable text-light bg-secondary"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
 &lt;plist version=&quot;1.0&quot;&gt;
@@ -216,7 +216,7 @@
     &lt;key&gt;PayloadContent&lt;/key&gt;
     &lt;array&gt;
         &lt;dict&gt;
-            &lt;key&gt;PayloadType&gt;
+            &lt;key&gt;PayloadType&lt;/key&gt;
             &lt;<span id="_PayloadType"></span>/&gt;
             &lt;key&gt;AutoJoin&lt;/key&gt;
             &lt;<span id="outputAutoJoin">true</span>/&gt;
